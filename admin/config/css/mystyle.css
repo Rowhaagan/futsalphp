@@ -1,0 +1,14 @@
+/*#btn-debug{
+	position: absolute;
+	right:1%;
+}
+#console-debug{
+	position: absolute;
+	top:50px;
+}*/
+.fh5co-nav-style-1 .fh5co-link-wrap ul li a, .fh5co-nav-style-2 .fh5co-link-wrap ul li a{
+	color:#1784FB !important;
+}
+.fh5co-nav-style-1 .fh5co-link-wrap ul li:hover a, .fh5co-nav-style-2 .fh5co-link-wrap ul li:hover a{
+	color:#58CA7E !important;
+}
