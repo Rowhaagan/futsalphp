@@ -1,4 +1,4 @@
-
+<?php if(isset($opened['user_id'])) { ?>
 	<script>
 		
 		$(document).ready(function() {
@@ -6,10 +6,11 @@
 			Dropzone.autoDiscover = false;
 			
 			var myDropzone = new Dropzone("#avatar-dropzone");
+
 	
 		});
-	
 	</script>
+<?php } ?>
 
 
 
@@ -49,6 +50,9 @@
 
 					<form action="index.php?page=users&id=<?php echo $opened['user_id']; ?>" method="post" role="form"> <!-- cancel if you want to -->
 
+						<?php if($opened['avatar'] =! ''){ ?>
+						<img scr="../uploads/<?php echo $opened['avatar']; ?>">
+						<?php } ?>
 						<div class="form-group">
 						
 							<label for="first_name">First Name:</label>
@@ -86,12 +90,13 @@
 
 					</form>
 
-
-					<form action="../uploads.php" class="dropzone" id="avatar-dropzone">
-						
-						<input type="file" name="file">
-
-					</form>	
+						<?php if(isset($opened['user_id'])) { ?>
+							<form class="dropzone" id="avatar-dropzone" action="uploads.php?id=<?php echo $opened['user_id']; ?>">
+			
+								<input type="file" name="file">
+			
+							</form>
+						<?php } ?>
 					</div>
 				</div>
 </div>
